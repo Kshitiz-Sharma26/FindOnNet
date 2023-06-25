@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Description</title>
+</head>
+<body>
+  <div class="product-container">
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61SSVxTSs3L._AC_UL400_.jpg" alt="Product Image" class="product-image">
+      <div class="product-price">$99.99</div>
+      <div class="product-description">
+        <h1>Product Description</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan orci et odio elementum, quis sodales enim suscipit.</p>
+        <button id="toggle-description">Toggle Description</button>
+      </div>
+      <div class="product-reviews">
+        <h2>Customer Reviews</h2>
+        <ul class="review-list">
+          <li class="review-item">
+            <span class="review-maker">Adam:</span> Great product!
+            <div class="review-actions">
+              <button class="like-button">Like</button>
+              <button class="dislike-button">Dislike</button>
+            </div>
+          </li>
+          <li class="review-item">
+            <span class="review-maker">Karan Sharma:</span> Highly recommended.
+            <div class="review-actions">
+              <button class="like-button">Like</button>
+              <button class="dislike-button">Dislike</button>
+            </div>
+          </li>
+          <li class="review-item">
+            <span class="review-maker">Harsh:</span> Excellent quality.
+            <div class="review-actions">
+              <button class="like-button">Like</button>
+              <button class="dislike-button">Dislike</button>
+            </div>
+          </li>
+        </ul>
+        <div class="add-review">
+          <input type="text" id="new-review-input" placeholder="Enter your review">
+          <button id="add-review">Add Review</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Toggle Description
+      $('#toggle-description').click(function() {
+        $('.product-description p').slideToggle()
+      });
+
+      // Add Review
+      $('#add-review').click(function() {
+        var newReview = $('#new-review-input').val();
+        var reviewItem = $('<span>').addClass('review-item');
+        var reviewMaker = $('<span>').addClass('review-maker').text('Kshitiz:');
+        var review = $('<span>').text(newReview);
+        var reviewActions = $('<div>').addClass('review-actions');
+        var likeButton = $('<button>').addClass('like-button').text('Like');
+        var dislikeButton = $('<button>').addClass('dislike-button').text('Dislike');
+        reviewActions.append(likeButton, dislikeButton);
+        reviewItem.append(reviewMaker,review, reviewActions);
+        $('.review-list').append(reviewItem);
+        $('#new-review-input').val('');
+      });
+
+      // Like and Dislike Buttons
+      $('.review-list').on('click', '.like-button', function() {
+        $(this).addClass('liked').text('Liked');
+      });
+
+      $('.review-list').on('click', '.dislike-button', function() {
+        $(this).addClass('Disliked').text('Disliked');
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+

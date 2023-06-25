@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Order History</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Order History</h2>
+    <ul class="order-list">
+      <li class="order-item">
+        <div class="order-header">
+          <span class="order-id">Order #Ksh1</span>
+          <span class="item-Ordered">
+            <span class="itemName">Sony HeadPhones(x1)</span>
+            <span class="itemPlaceHolder">See Item Ordered</span>
+          </span>
+          <span class="order-status">Delivered</span>
+        </div>
+        <div class="order-details">
+          <span class="order-date">Date: June 11, 2023</span>
+          <span class="order-total">Total: Rs 1500</span>
+        </div>
+      </li>
+      <li class="order-item">
+        <div class="order-header">
+          <span class="order-id">Order #Ksh2</span>
+          <span class="item-Ordered">
+            <span class="itemName">Mi Band 5(x2)</span>
+            <span class="itemPlaceHolder">See Item Ordered</span>
+          </span>
+          <span class="order-status">Despatched</span>
+        </div>
+        <div class="order-details">
+          <span class="order-date">Date: June 14, 2023</span>
+          <span class="order-total">Total: Rs 7500.50</span>
+        </div>
+      </li>
+      <li class="order-item">
+        <div class="order-header">
+          <span class="order-id">Order #Ksh2</span>
+          <span class="item-Ordered">
+            <span class="itemName">Gold Coin 10 gram(x2)</span>
+            <span class="itemPlaceHolder">See Item Ordered</span>
+          </span>
+          <span class="order-status">Despatched</span>
+        </div>
+        <div class="order-details">
+          <span class="order-date">Date: June 14, 2023</span>
+          <span class="order-total">Total: Rs 7500.50</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <script>
+    $(document).ready(function() {
+      $('.order-item').each(function(index) {
+        $(this).delay(index * 200).slideDown(600);
+      });
+    });
+    $(document).ready(function() {
+      $('.itemPlaceHolder').each(function() {
+        $(this).click(function(){
+          $(this).hide();
+          $(this).prev().show();
+        })
+      });
+    });
+    $(document).ready(function() {
+      $('.itemName').each(function() {
+        $(this).click(function(){
+          $(this).hide();
+          $(this).next().show();
+        })
+      });
+    });
+  </script>
+</body>
+</html>
