@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,3 +79,151 @@
   </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Order History</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+    .container {
+      max-width: 800px;
+      margin: 10% auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .order-list {
+      list-style: none;
+    }
+    .order-item {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+      background-color: #fff;
+      display: none; /* Hide the order items initially */
+    }
+    .order-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    
+    .order-id {
+      font-weight: bold;
+    }
+    
+    .order-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .order-date {
+      font-size: 14px;
+      color: #888;
+    }
+    
+    .order-total {
+      font-weight: bold;
+      color: #FFA500;
+    }
+    .itemPlaceHolder , .itemName{
+      color: crimson;
+      font-size: larger;
+      padding: 2px 0;
+
+    }
+    .itemName{
+      display: none;
+    }
+    .itemPlaceHolder:hover , .itemName:hover{
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Order History</h2>
+    <ul class="order-list">
+      <li class="order-item">
+        <div class="order-header">
+          <span class="order-id">Order #Ksh1</span>
+          <span class="item-Ordered">
+            <span class="itemName">Sony HeadPhones(x1)</span>
+            <span class="itemPlaceHolder">See Item Ordered</span>
+          </span>
+          <span class="order-status">Delivered</span>
+        </div>
+        <div class="order-details">
+          <span class="order-date">Date: June 11, 2023</span>
+          <span class="order-total">Total: Rs 1500</span>
+        </div>
+      </li>
+      <li class="order-item">
+        <div class="order-header">
+          <span class="order-id">Order #Ksh2</span>
+          <span class="item-Ordered">
+            <span class="itemName">Mi Band 5(x2)</span>
+            <span class="itemPlaceHolder">See Item Ordered</span>
+          </span>
+          <span class="order-status">Despatched</span>
+        </div>
+        <div class="order-details">
+          <span class="order-date">Date: June 14, 2023</span>
+          <span class="order-total">Total: Rs 7500.50</span>
+        </div>
+      </li>
+      <li class="order-item">
+        <div class="order-header">
+          <span class="order-id">Order #Ksh2</span>
+          <span class="item-Ordered">
+            <span class="itemName">Gold Coin 10 gram(x2)</span>
+            <span class="itemPlaceHolder">See Item Ordered</span>
+          </span>
+          <span class="order-status">Despatched</span>
+        </div>
+        <div class="order-details">
+          <span class="order-date">Date: June 14, 2023</span>
+          <span class="order-total">Total: Rs 7500.50</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <script>
+    $(document).ready(function() {
+      $('.order-item').each(function(index) {
+        $(this).delay(index * 200).slideDown(600);
+      });
+    });
+    $(document).ready(function() {
+      $('.itemPlaceHolder').each(function() {
+        $(this).click(function(){
+          $(this).hide();
+          $(this).prev().show();
+        })
+      });
+    });
+    $(document).ready(function() {
+      $('.itemName').each(function() {
+        $(this).click(function(){
+          $(this).hide();
+          $(this).next().show();
+        })
+      });
+    });
+  </script>
+</body>
+</html>
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -237,4 +238,245 @@
     }
   </script>
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/5f8ac1458e.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {
+      display: flex;
+      width: 90%;
+      gap: 17px;
+      margin: 2% auto;
+    }
+    #root {
+      width: 100%;
+      display: grid;
+      grid-gap: 10px;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+        gap: 2rem;
+    }
+    .row{
+        position: relative;
+    }
+    .row img{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        max-width: 250px;
+        transition: all .40s;
+    }
+    .row img:hover{
+        transform: scale(0.9);
+    }
+    .price h4{
+        color: #111;
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: 300;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .price p{
+        color: #151515;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .fa-solid {
+        color: #ff9800;
+    }
+    .head {
+      background-color: #ff9800;
+      border-radius: 3px;
+      height: 40px;
+      padding: 10px;
+      margin-bottom: 20px;
+      color: white;
+      font-size: larger;
+      text-align: left;
+    }
+    .sidebar {
+      min-width: 40%;
+      border-radius: 5px;
+      background-color: #0889f3b4;
+      padding: 15px;
+    }
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0px;
+      padding: 10px 0px;
+      border-top: 1px solid #fb0606;
+    }
+   
+    
+    button {
+      width: 100%;
+      position: relative;
+      border: none;
+      border-radius: 5px;
+      background-color: #84b6fc;
+      padding: 7px 25px;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    
+    .cart-item {
+      display: flex;
+      align-items:baseline;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: white;
+      border-bottom: 1px solid #aaa;
+      border-radius: 3px;
+      margin: 10px 10px;
+    }
+    .fa-trash:hover {
+      cursor: pointer;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+        <div class="head"><p>My Cart</p></div>
+        <div id="cartItem">Add Items</div>
+        <div class="foot">
+            <h3>Total</h3>
+            <h2 id="total">Rs. 0.00</h2>
+          </div>
+      <div>Items : <p id="count">0</p></div>
+      </div>
+    <div id="root">
+        <div class="products">
+            <div class="row">
+                <img src="https://m.media-amazon.com/images/I/81-btS1UL3L._SL1500_.jpg" alt="" height="300px">
+                <div class="price">
+                    <h4>OnePlus 6 (Mirror Black, 8GB RAM, 128GB Storage)</h4>
+                    <p>Rs. 69999</p>
+                    <button onclick='addtocart(0)'>Add to cart</button>
+                </div>
+            </div>
+            <div class="row">
+                <img src="https://m.media-amazon.com/images/I/41iXrVaOPcL._AC_SR400,600_.jpg" alt="">
+                <div class="price">
+                    <h4>32 Ltrs Grey Casual Backpack</h4>
+                    <p>Rs. 2000</p>
+                </div>
+                <button onclick='addtocart(1)'>Add to cart</button>
+            </div>
+
+            <div class="row">
+                <img src="https://m.media-amazon.com/images/I/61SSVxTSs3L._AC_UL400_.jpg" alt="">
+                <div class="price">
+                    <h4>Noise Pulse 2</h4>
+                    <p>Rs. 5000</p>
+                </div>
+                <button onclick='addtocart(2)'>Add to cart</button>
+            </div>
+
+            <div class="row">
+                <img src="https://m.media-amazon.com/images/I/31b5TpeKIVL._AC_SR400,600_.jpg" alt="">
+                <div class="price">
+                    <h4>Men Max Black Formal Shoes</h4>
+                    <p>Rs. 2000</p>
+                </div>
+                <button onclick='addtocart(3)'>Add to cart</button>
+            </div>
+
+            <div class="row">
+                <img src="https://m.media-amazon.com/images/I/31O4nAWWyzL._AC_SR400,600_.jpg" alt="">
+                <div class="price">
+                    <h4>Puma-Men Track Pants</h4>
+                    <p>Rs. 4999</p>
+                </div>
+                <button onclick='addtocart(4)'>Add to cart</button>
+            </div>
+
+            <div class="row">
+                <img src="https://images-eu.ssl-images-amazon.com/images/I/91za0xSj48L._AC_UL450_SR450,320_.jpg" alt="">
+                <div class="price">
+                    <h4>WildHorn Leather Wallet for Men</h4>
+                    <p>Rs. 599</p>
+                </div>
+                <button onclick='addtocart(5)'>Add to cart</button>
+            </div>
+        </div>
+    </div>
+    
+</div>
+  <script>
+    const product = [
+      {
+        title: 'OnePlus 6',
+        price: 69999,
+      },
+      {
+        title: 'Grey Backpack',
+        price: 2000,
+      },
+      {
+        title: 'Noise Pulse 2',
+        price: 5000
+      },
+      {
+        title: 'Men Formal Shoes',
+        price:2000
+        },
+      {
+        title: 'Puma-Men Track Pants',
+        price: 4999,
+      },
+      {
+        title: 'Wallet For Men',
+        price: 599,
+      }
+    ];
+    var cart = [];
+
+    function addtocart(a) {
+      cart.push(product[a]);
+      console.log(cart);
+      displaycart();
+    }
+    function delElement(a) {
+      cart.splice(a, 1);
+      displaycart();
+    }
+
+    function displaycart() {
+      let j = 0, total = 0;
+      if (cart.length == 0) {
+        document.getElementById('count').innerHTML = "0";
+        document.getElementById('cartItem').innerHTML = "Your cart is empty";
+        document.getElementById("total").innerHTML = "Rs. " + 0 + ".00";
+      } else {
+        document.getElementById('count').innerHTML = `${cart.length}`;
+        document.getElementById("cartItem").innerHTML = cart.map((items) => {
+          var { title, price } = items;
+          total = total + price;
+          document.getElementById("total").innerHTML = "Rs. " + total + ".00";
+          return (
+            `<div class='cart-item'>
+            <p>${title}</p>
+            <h2>Rs. ${price}.00</h2>` +
+            "<i class='fa-solid fa-trash' onclick='delElement(" + (j++) + ")'></i></div>"
+          );
+        }).join('');
+      }
+    }
+  </script>
+</body>
+>>>>>>> origin/main
 </html>
