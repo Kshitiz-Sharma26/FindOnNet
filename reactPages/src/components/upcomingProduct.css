@@ -1,0 +1,25 @@
+/* UpcomingProduct.css */
+.product-container {
+    display: flex;
+    max-width: 80vw;
+    margin: 20px auto;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .product-image img {
+    width: 150px;
+  }
+  
+  /* .product-details {
+    flex-grow: 1;
+  } */
+  
+  .countdown {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5500;
+  }
+  

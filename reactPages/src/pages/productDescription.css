@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  font-size: small;
+}
+.product-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.product {
+  width: 80%;
+  margin: 20px;
+  background-color: #fe9102c9;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.product-image {
+  width: 300px;
+  height: 300px;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+.product-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.product-description {
+  margin-bottom: 10px;
+}
+.product-description p{
+  background-color: white;
+  padding:15px 10px;
+}
+.product-reviews {
+  margin-bottom: 10px;
+  background-color: white;
+  border: 1px solid orange;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#toggle-description{
+  padding: 4px 6px;
+  background-color: white;
+  color: #fe9102;
+  font-size: larger;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 0;
+}
+.review-list {
+  list-style-type: none;
+  padding: 0;
+}
+.review-item {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+.review-maker {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.review-actions {
+  display: flex;
+  align-items: center;
+}
+.like-button,
+.dislike-button {
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 80px;
+  border: 0;
+  border-radius: 2px;
+}
+.liked {
+  background-color: rgb(74, 189, 74);
+}
+.Disliked{
+  background-color: rgb(233, 57, 57);
+}
+#new-review-input{
+  line-height: 2;
+  font-size: larger;
+  border-radius: 4px;
+  border: 0;
+  background-color:#b4efed;
+  margin: 2px;
+}
+#add-review{
+  padding: 4px 10px;
+  line-height: 2;
+  font-weight: 600;
+  font-size: 110%;
+  border: 0;
+  background-color: chartreuse;
+}
